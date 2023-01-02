@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Murray"
+        android:textSize="40sp"
+        android:textColor="#6677F7"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunitoExtraBold"/>
+
+    <TextView
+        android:id="@+id/textViewTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memory assistant"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunitoSemiBold"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
