@@ -4,15 +4,170 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="@dimen/def_margin"
+    android:paddingRight="@dimen/def_margin"
+    android:paddingTop="@dimen/large_margin"
+    android:paddingBottom="@dimen/large_margin"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/login_label"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_large_size"
+        android:fontFamily="@font/nunitobold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/textViewLoginDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/login_description"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLogin" />
+    <TextView
+        android:id="@+id/textViewLoginEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/email"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginDescription" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:hint="@string/email"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginEmail" />
+
+    <TextView
+        android:id="@+id/textViewLoginPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/password"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:hint="@string/password"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLoginPassword" />
+
+    <CheckBox
+        android:id="@+id/checkboxKeepLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:text="@string/checkbox_keep_login"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:backgroundTint="@color/lavender_blue"
+        android:text="@string/login_label"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_medium_size"
+        android:fontFamily="@font/nunitobold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkboxKeepLogin"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/buttonForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:backgroundTint="@color/transparent"
+        android:text="@string/forgot_password"
+        android:textColor="@color/lavender_blue"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_medium_size"
+        android:fontFamily="@font/nunitobold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonLogin"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewErrorLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:visibility="invisible"
+        android:text="@string/error_login"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonForgotPassword" />
+
+    <TextView
+        android:id="@+id/textViewAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/account_label"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonSignUp"/>
+
+    <TextView
+        android:id="@+id/buttonSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:layout_marginLeft="@dimen/min_margin"
+        android:backgroundTint="@color/transparent"
+        android:text="@string/sign_up"
+        android:textColor="@color/lavender_blue"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitobold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">Murray</string>
+    <string name="app_name">Murray - Memory Assistant</string>
+    <string name="login_label">Login</string>
+    <string name="font_family">sans-serif-condensed-light</string>
+    <string name="login_description">Sign in with your data that you entered during your registration.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="checkbox_keep_login">Keep me logged in</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="account_label">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="error_login">Invalid email or password!</string>
+    <string name="register_label">Create account</string>
+    <string name="register_description">Register with your data in the fields below</string>
+    <string name="first_name">First name</string>
+    <string name="first_name_hint">Please enter your first name</string>
+    <string name="last_name">Last name</string>
+    <string name="last_name_hint">Please enter your last name</string>
+    <string name="email_hint">Please enter a valid e-mail</string>
+    <string name="password_hint">Please choose a password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="repeat_password_hint">Please repeat the chosen password</string>
+    <string name="checkbox_caregiver">I\'m a caregiver</string>
+    <string name="patient_email">Enter patient\'s e-mail</string>
+    <string name="patient_email_hint">Please enter the e-mail of your patient</string>
+    <string name="forgot_password_2">I forgot my password</string>
+    <string name="forgot_password_description">Please enter the required data to recover your password</string>
+    <string name="recover_password">Send recovery e-mail</string>
 </resources>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/def_margin"
+    android:paddingRight="@dimen/def_margin"
+    android:paddingTop="@dimen/large_margin"
+    android:paddingBottom="@dimen/large_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_label"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_large_size"
+        android:fontFamily="@font/nunitobold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/textViewRegisterDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/register_description"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRegister" />
+    <TextView
+        android:id="@+id/textViewFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/first_name"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRegisterDescription" />
+
+    <EditText
+        android:id="@+id/editTextFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:hint="@string/first_name_hint"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewFirstName" />
+
+    <TextView
+        android:id="@+id/textViewLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/last_name"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextFirstName" />
+
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:hint="@string/last_name_hint"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLastName" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/email"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextLastName" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:hint="@string/email_hint"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/password"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:hint="@string/password_hint"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPassword" />
+
+    <TextView
+        android:id="@+id/textViewRepeatPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/repeat_password"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+
+    <EditText
+        android:id="@+id/editTextRepeatPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:hint="@string/repeat_password_hint"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRepeatPassword" />
+
+    <CheckBox
+        android:id="@+id/checkboxCaregiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:text="@string/checkbox_caregiver"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextRepeatPassword" />
+
+    <TextView
+        android:id="@+id/textViewPatientEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:visibility="gone"
+        android:text="@string/patient_email"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkboxCaregiver" />
+
+    <EditText
+        android:id="@+id/editTextPatientEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:visibility="gone"
+        android:hint="@string/patient_email_hint"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPatientEmail" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:backgroundTint="@color/lavender_blue"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_medium_size"
+        android:fontFamily="@font/nunitobold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPatientEmail"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
