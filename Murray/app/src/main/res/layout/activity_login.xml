@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/def_margin"
     android:paddingTop="@dimen/large_margin"
     android:paddingBottom="@dimen/large_margin"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/textViewLogin"
@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewLogin" />
     <TextView
-        android:id="@+id/textViewLoginEmail"
+        android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/def_margin"
@@ -46,18 +46,19 @@
 
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/min_margin"
+        android:background="@drawable/edittext_frame"
         android:hint="@string/email"
         android:textColor="@color/black_1"
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitoregular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewLoginEmail" />
+        app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
 
     <TextView
-        android:id="@+id/textViewLoginPassword"
+        android:id="@+id/textViewPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/def_margin"
@@ -70,15 +71,16 @@
 
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/min_margin"
+        android:background="@drawable/edittext_frame"
         android:hint="@string/password"
         android:textColor="@color/black_1"
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitoregular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewLoginPassword" />
+        app:layout_constraintTop_toBottomOf="@id/textViewPassword" />
 
     <CheckBox
         android:id="@+id/checkboxKeepLogin"
@@ -89,6 +91,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitoregular"
+        android:buttonTint="@color/lavender_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
 
@@ -118,6 +121,7 @@
         android:textAllCaps="false"
         android:textSize="@dimen/text_medium_size"
         android:fontFamily="@font/nunitobold"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonLogin"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -127,7 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/def_margin"
-        android:visibility="invisible"
+        android:visibility="gone"
         android:text="@string/error_login"
         android:textColor="@color/red"
         android:textSize="@dimen/text_small_size"
@@ -160,6 +164,7 @@
         android:textAllCaps="false"
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitobold"
+        android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

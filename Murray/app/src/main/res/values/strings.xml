@@ -26,4 +26,13 @@
     <string name="forgot_password_2">I forgot my password</string>
     <string name="forgot_password_description">Please enter the required data to recover your password</string>
     <string name="recover_password">Send recovery e-mail</string>
+    <string name="add_medicine">Add medicine</string>
+    <string name="medicine_name">Medicine name</string>
+    <string name="minutes">minutes</string>
+    <string name="before">before</string>
+    <string name="after">after</string>
+    <string name="eating">eating</string>
+    <string name="pills">pills</string>
+    <string name="medicine_details">Medicine details &amp; instructions (optional)</string>
+    <string name="details">Details</string>
 </resources>
