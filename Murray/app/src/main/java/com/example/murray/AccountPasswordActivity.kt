@@ -73,6 +73,7 @@ class AccountPasswordActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun changePassword() {
+        //TODO("Validate password")
         val dialogBinding = layoutInflater.inflate(R.layout.dialog_custom_simple, null)
 
         val myDialog = Dialog(this)
