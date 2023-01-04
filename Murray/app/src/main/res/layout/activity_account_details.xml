@@ -25,7 +25,7 @@
         android:textColor="#6677F7"
         app:layout_constraintTop_toTopOf="parent"
         android:textAlignment="center"
-        android:fontFamily="@font/nunito_extra_bold"/>
+        android:fontFamily="@font/nunitoextrabold"/>
 
     <View
         android:id="@+id/viewLine1"
@@ -45,7 +45,7 @@
         android:textSize="16sp"
         android:textColor="@color/black"
         android:textAlignment="center"
-        android:fontFamily="@font/nunito_semi_bold"
+        android:fontFamily="@font/nunitosemibold"
         app:layout_constraintTop_toBottomOf="@id/viewLine1"/>
 
     <TextView
@@ -55,7 +55,7 @@
         android:text="My details"
         android:textSize="30sp"
         android:textColor="@color/black"
-        android:fontFamily="@font/nunito_bold"
+        android:fontFamily="@font/nunitobold"
         android:layout_marginStart="@dimen/def_margin_start"
         android:layout_marginTop="@dimen/def_medium_margin_top"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle2"/>
@@ -67,7 +67,7 @@
         android:text="Surname"
         android:textSize="12sp"
         android:textColor="#545563"
-        android:fontFamily="@font/nunito_semi_bold"
+        android:fontFamily="@font/nunitosemibold"
         android:layout_marginStart="@dimen/def_margin_start"
         android:layout_marginTop="@dimen/def_medium_margin_top"
         app:layout_constraintTop_toBottomOf="@id/textViewAccountTitle"/>
@@ -93,7 +93,7 @@
         android:text="Name"
         android:textSize="12sp"
         android:textColor="#545563"
-        android:fontFamily="@font/nunito_semi_bold"
+        android:fontFamily="@font/nunitosemibold"
         android:layout_marginStart="@dimen/def_margin_start"
         android:layout_marginTop="@dimen/def_medium_margin_top"
         app:layout_constraintTop_toBottomOf="@id/editTextSurname"/>
@@ -120,7 +120,7 @@
         android:text="Update"
         android:textAllCaps="false"
         android:textSize="20sp"
-        android:fontFamily="@font/nunito_bold"
+        android:fontFamily="@font/nunitobold"
         android:textColor="@color/white"
         android:layout_marginTop="@dimen/def_button_margin_top"
         android:layout_marginBottom="@dimen/def_medium_margin_top"

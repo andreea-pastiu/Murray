@@ -12,4 +12,5 @@
     <color name="transparent">#00000000</color>
     <color name="red">#FFFF0000</color>
     <color name="gray">#FF83859C</color>
+    <color name="border_details">#C7C8D2</color>
 </resources>
