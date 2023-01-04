@@ -6,19 +6,14 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
-import android.util.Log.INFO
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import java.util.logging.Level.INFO
+
 
 class AccountActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -99,7 +94,18 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
         cancelButton.setOnClickListener{
             myDialog.dismiss()
         }
-        //TODO("Implement open gallery and camera! Maybe try add that shadow and blur")
+        val openCameraButton = dialogBinding.findViewById<ImageView>(R.id.imageViewContainerPicture)
+        openCameraButton.setOnClickListener{
+            val intent = Intent("android.media.action.IMAGE_CAPTURE")
+            startActivity(intent)
+        }
+        val openGalleryButton = dialogBinding.findViewById<ImageView>(R.id.imageViewContainerGallery)
+        openGalleryButton.setOnClickListener{
+            val intent = Intent()
+            intent.type = "image/*"
+            intent.action = Intent.ACTION_GET_CONTENT
+            startActivity(Intent.createChooser(intent, "Select Picture"))
+        }
     }
 
     private fun openDetails() {
