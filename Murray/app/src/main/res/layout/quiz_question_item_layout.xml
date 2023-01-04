@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageViewQuestionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/question_container"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewQuestionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginTop="@dimen/def_very_small_medium_margin_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/imageViewQuestionContainer"/>
+
+    <TextView
+        android:id="@+id/textViewQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginStart="@dimen/def_very_very_small_margin_top"
+        android:layout_marginTop="@dimen/def_very_small_medium_margin_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewQuestionTitle"/>
+
+    <TextView
+        android:id="@+id/textViewQuestionText"
+        android:layout_width="309dp"
+        android:layout_height="19dp"
+        android:text="Where does Mary, your daughter, live?"
+        android:textSize="13sp"
+        android:textColor="#545563"
+        android:fontFamily="@font/nunitoregular"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginBottom="@dimen/def_very_small_medium_margin_top"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewQuestionContainer"
+        app:layout_constraintStart_toStartOf="@id/imageViewQuestionContainer"/>
+
+    <View
+        android:id="@+id/viewLine1"
+        android:layout_width="3dp"
+        android:layout_height="50dp"
+        android:background="#D6DBFF"
+        android:layout_marginTop="@dimen/def_very_small_margin_top"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageViewEditButton"/>
+
+    <ImageView
+        android:id="@+id/imageViewEditButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/edit_question_button"
+        android:layout_marginTop="@dimen/def_small_medium_margin_top"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toTopOf="@id/imageViewQuestionContainer"
+        app:layout_constraintEnd_toEndOf="@id/imageViewQuestionContainer"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,9 @@
     <dimen name="def_margin_start">15dp</dimen>
     <dimen name="def_medium_margin_start">35dp</dimen>
     <dimen name="def_large_margin_start">135dp</dimen>
+    <dimen name="def_very_very_small_margin_top">5dp</dimen>
     <dimen name="def_very_small_margin_top">10dp</dimen>
+    <dimen name="def_very_small_medium_margin_top">15dp</dimen>
     <dimen name="def_small_margin_top">20dp</dimen>
     <dimen name="def_small_medium_margin_top">25dp</dimen>
     <dimen name="def_medium_margin_top">30dp</dimen>
