@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="def_margin_start">15dp</dimen>
+    <dimen name="def_medium_margin_start">35dp</dimen>
+    <dimen name="def_large_margin_start">135dp</dimen>
+    <dimen name="def_very_small_margin_top">10dp</dimen>
+    <dimen name="def_small_margin_top">20dp</dimen>
+    <dimen name="def_small_medium_margin_top">25dp</dimen>
+    <dimen name="def_medium_margin_top">30dp</dimen>
+    <dimen name="def_large_margin_top">40dp</dimen>
+    <dimen name="def_very_large_margin_top">100dp</dimen>
+    <dimen name="def_very_large_text_margin_top">110dp</dimen>
+    <dimen name="def_very_large_button_margin_top">180dp</dimen>
+    <dimen name="def_button_margin_top">660dp</dimen>
+</resources>

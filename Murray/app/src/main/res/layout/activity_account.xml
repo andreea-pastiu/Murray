@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AccountActivity">
+
+    <ImageView
+        android:id="@+id/imageViewBackButton"
+        android:layout_width="53dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back_button"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Murray"
+        android:textSize="40sp"
+        android:textColor="#6677F7"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunito_extra_bold"/>
+
+    <View
+        android:id="@+id/viewLine1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D6DBFF"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle1"
+        app:layout_constraintStart_toStartOf="@id/textViewTitle1"/>
+
+    <TextView
+        android:id="@+id/textViewTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memory assistant"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunito_semi_bold"
+        app:layout_constraintTop_toBottomOf="@id/viewLine1"/>
+
+    <TextView
+        android:id="@+id/textViewAccountTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Account"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle2"/>
+
+    <ImageView
+        android:id="@+id/imageViewAccountPhoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/default_photo"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        android:layout_marginStart="@dimen/def_large_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/textViewAccountTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewNameTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name Surname"
+        android:textSize="28sp"
+        android:textColor="#4147D5"
+        android:fontFamily="@font/nunito_bold"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/imageViewAccountPhoto"/>
+
+    <View
+        android:id="@+id/viewLine2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#D6DBFF"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/textViewNameTag"
+        app:layout_constraintStart_toStartOf="@id/textViewNameTag"/>
+
+    <ImageView
+        android:id="@+id/imageViewContainerButton1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/text_container"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/viewLine2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewButtonTag1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit my details"
+        android:textSize="20sp"
+        android:textColor="#6677F7"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_large_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/viewLine2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageViewArrowButton1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_arrow"
+        android:layout_marginTop="@dimen/def_large_margin_top"
+        android:layout_marginEnd="@dimen/def_medium_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/viewLine2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageViewContainerButton2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/text_container"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/imageViewContainerButton1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewButtonTag2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change password"
+        android:textSize="20sp"
+        android:textColor="#6677F7"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/imageViewContainerButton1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageViewArrowButton2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_arrow"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        android:layout_marginEnd="@dimen/def_medium_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/imageViewContainerButton1"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageViewContainerButton3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/text_container"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/imageViewContainerButton2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewButtonTag3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report a problem"
+        android:textSize="20sp"
+        android:textColor="#6677F7"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/imageViewContainerButton2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageViewArrowButton3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_arrow"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        android:layout_marginEnd="@dimen/def_medium_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/imageViewContainerButton2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_container"
+        android:text="Log out"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        android:layout_marginBottom="@dimen/def_medium_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/imageViewContainerButton3"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
