@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".QuizFormActivity">
+
+    <ImageView
+        android:id="@+id/imageViewBackButton"
+        android:layout_width="53dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back_button"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Murray"
+        android:textSize="40sp"
+        android:textColor="#6677F7"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunitoextrabold"/>
+
+    <View
+        android:id="@+id/viewLine1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D6DBFF"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle1"
+        app:layout_constraintStart_toStartOf="@id/textViewTitle1"/>
+
+    <TextView
+        android:id="@+id/textViewTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memory assistant"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunitosemibold"
+        app:layout_constraintTop_toBottomOf="@id/viewLine1"/>
+
+    <TextView
+        android:id="@+id/textViewQuizTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily quiz"
+        android:textSize="36sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageViewQuestionFormContainer"
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:background="@drawable/quiz_form_container"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/textViewQuizTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewQuizSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a question"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitosemibold"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        app:layout_constraintTop_toTopOf="@id/imageViewQuestionFormContainer"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextEnterQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:padding="15dp"
+        android:hint="Write your question here..."
+        android:textColorHint="#83859C"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitoregular"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginEnd="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_very_small_medium_margin_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewQuizSubtitle"/>
+
+    <TextView
+        android:id="@+id/textViewAddAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a question"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitosemibold"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/editTextEnterQuestion"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewAddAnswersDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please check the correct one"
+        android:textSize="14sp"
+        android:textColor="#6677F7"
+        android:fontFamily="@font/nunitosemibold"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_very_small_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/textViewAddAnswers"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radioGroupAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/def_very_small_margin_top"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/textViewAddAnswersDetail"
+        app:layout_constraintStart_toStartOf="parent">
+        <RadioButton android:id="@+id/radioAnswer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_very_small_margin_top"
+            android:buttonTint="#6677F7"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radioAnswer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_small_margin_top"
+            android:buttonTint="#6677F7"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radioAnswer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_small_margin_top"
+            android:buttonTint="#6677F7"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextAnswer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:hint="Answer 1..."
+        android:textColorHint="#83859C"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitoregular"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginEnd="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_very_small_margin_top"
+        app:layout_constraintStart_toStartOf="@id/radioGroupAnswers"
+        app:layout_constraintTop_toBottomOf="@id/textViewAddAnswersDetail"/>
+
+    <EditText
+        android:id="@+id/editTextAnswer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:hint="Answer 2..."
+        android:textColorHint="#83859C"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitoregular"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginEnd="@dimen/def_medium_margin_start"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/radioGroupAnswers"
+        app:layout_constraintTop_toBottomOf="@id/editTextAnswer1"/>
+
+    <EditText
+        android:id="@+id/editTextAnswer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:hint="Answer 3..."
+        android:textColorHint="#83859C"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitoregular"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginEnd="@dimen/def_medium_margin_start"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/radioGroupAnswers"
+        app:layout_constraintTop_toBottomOf="@id/editTextAnswer2"/>
+
+    <TextView
+        android:id="@+id/textViewAddDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add details about the correct answer"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitosemibold"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupAnswers"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextEnterDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:padding="15dp"
+        android:hint="Add some details about your memory..."
+        android:textColorHint="#83859C"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitoregular"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginEnd="@dimen/def_medium_margin_start"
+        android:layout_marginTop="@dimen/def_very_small_medium_margin_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewAddDetails"/>
+
+    <Button
+        android:id="@+id/buttonChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_container"
+        android:text="Add to question list"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:fontFamily="@font/nunitobold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_medium_margin_start"
+        android:layout_marginEnd="@dimen/def_medium_margin_start"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewQuestionFormContainer"
+        app:layout_constraintStart_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
