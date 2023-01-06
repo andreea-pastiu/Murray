@@ -13,6 +13,27 @@
         android:theme="@style/Theme.Murray"
         tools:targetApi="31">
         <activity
+            android:name=".ContactListCaregiverActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AddContactActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MedicineListCaregiverActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".AddMedicineActivity"
             android:exported="false">
             <meta-data
@@ -49,7 +70,7 @@
         <activity
             android:name=".AccountActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Design.Light">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -57,7 +78,7 @@
         <activity
             android:name=".AccountDetailsActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Design.Light">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -65,7 +86,7 @@
         <activity
             android:name=".AccountPasswordActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Design.Light">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -73,7 +94,7 @@
         <activity
             android:name=".AccountProblemActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Design.Light">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

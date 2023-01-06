@@ -7,4 +7,8 @@
     <dimen name="text_small_size">14sp</dimen>
     <dimen name="text_medium_size">16sp</dimen>
     <dimen name="text_large_size">24sp</dimen>
+    <dimen name="padding_horizontal_radio">7dp</dimen>
+    <dimen name="padding_vertical_radio">1dp</dimen>
+    <dimen name="image_height">200dp</dimen>
+    <dimen name="divider_height">10dp</dimen>
 </resources>

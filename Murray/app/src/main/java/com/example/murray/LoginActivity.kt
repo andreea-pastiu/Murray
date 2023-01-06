@@ -57,6 +57,8 @@ class LoginActivity : AppCompatActivity(), OnClickListener {
                         //val intent = Intent(this, HomePageActivity::class.java)
                         //intent.putExtra("type", "caregiver")
                         //startActivity(intent)
+                        val intent = Intent(this, ContactListCaregiverActivity::class.java)
+                        startActivity(intent)
                     } else {
                         if (emailEditText.text.toString() == "patient@gmail.com" && passwordEditText.text.toString() == "patient") {
                             errorLoginTextView.visibility = GONE
@@ -68,9 +70,6 @@ class LoginActivity : AppCompatActivity(), OnClickListener {
                             errorLoginTextView.visibility = VISIBLE
                         }
                     }
-                    //go to Home Page
-                    //val intent = Intent(this, HomePageActivity::class.java)
-                    //startActivity(intent)
                 }
             }
         }

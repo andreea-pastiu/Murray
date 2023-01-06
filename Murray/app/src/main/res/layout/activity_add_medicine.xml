@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMedicineActivity">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,33 +13,22 @@
     android:paddingLeft="@dimen/def_margin"
     android:paddingRight="@dimen/def_margin"
     android:paddingTop="@dimen/large_margin"
-    android:paddingBottom="@dimen/large_margin"
-    tools:context=".AddMedicineActivity">
+    android:paddingBottom="@dimen/large_margin">
 
     <TextView
-        android:id="@+id/textViewLogin"
+        android:id="@+id/textViewAddMedicine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login_label"
+        android:text="@string/add_medicine"
         android:textColor="@color/black_1"
         android:textSize="@dimen/text_large_size"
         android:fontFamily="@font/nunitobold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
     <TextView
-        android:id="@+id/textViewLoginDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/def_margin"
-        android:text="@string/login_description"
-        android:textColor="@color/black_1"
-        android:textSize="@dimen/text_small_size"
-        android:fontFamily="@font/nunitoregular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewLogin" />
-    <TextView
-        android:id="@+id/textViewEmail"
+        android:id="@+id/textViewMedicineName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/def_margin"
@@ -42,137 +37,247 @@
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitoregular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewLoginDescription" />
+        app:layout_constraintTop_toBottomOf="@id/textViewAddMedicine" />
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/editTextMedicineName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/min_margin"
         android:background="@drawable/edittext_frame"
-        android:hint="@string/email"
+        android:hint="@string/medicine_name"
         android:textColor="@color/black_1"
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitoregular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
-
-    <TextView
-        android:id="@+id/textViewPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/def_margin"
-        android:text="@string/password"
-        android:textColor="@color/black_1"
-        android:textSize="@dimen/text_small_size"
-        android:fontFamily="@font/nunitoregular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
-
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/min_margin"
-        android:background="@drawable/edittext_frame"
-        android:hint="@string/password"
-        android:textColor="@color/black_1"
-        android:textSize="@dimen/text_small_size"
-        android:fontFamily="@font/nunitoregular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewPassword" />
-
-    <CheckBox
-        android:id="@+id/checkboxKeepLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/min_margin"
-        android:text="@string/checkbox_keep_login"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_small_size"
-        android:fontFamily="@font/nunitoregular"
-        android:buttonTint="@color/lavender_blue"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+        app:layout_constraintTop_toBottomOf="@id/textViewMedicineName" />
 
     <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="0dp"
+        android:id="@+id/buttonDecreaseMinutes"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="@dimen/padding_horizontal_radio"
+        android:paddingVertical="@dimen/padding_vertical_radio"
         android:layout_marginTop="@dimen/def_margin"
         android:backgroundTint="@color/lavender_blue"
-        android:text="@string/login_label"
+        android:text="@string/minus"
         android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="@dimen/text_medium_size"
         android:fontFamily="@font/nunitobold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkboxKeepLogin"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/editTextMedicineName" />
 
     <TextView
-        android:id="@+id/buttonForgotPassword"
+        android:id="@+id/textViewMinutesNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/def_margin"
-        android:backgroundTint="@color/transparent"
-        android:text="@string/forgot_password"
-        android:textColor="@color/lavender_blue"
+        android:paddingTop="@dimen/padding_horizontal_radio"
+        android:paddingHorizontal="@dimen/padding_horizontal_radio"
+        android:text="0"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toEndOf="@id/buttonDecreaseMinutes"
+        app:layout_constraintTop_toBottomOf="@id/editTextMedicineName" />
+
+    <TextView
+        android:id="@+id/textViewMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:paddingTop="@dimen/padding_horizontal_radio"
+        android:paddingHorizontal="@dimen/padding_horizontal_radio"
+        android:text="@string/minutes"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toEndOf="@id/buttonIncreaseMinutes"
+        app:layout_constraintTop_toBottomOf="@id/editTextMedicineName" />
+
+    <Button
+        android:id="@+id/buttonIncreaseMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="@dimen/padding_horizontal_radio"
+        android:paddingVertical="@dimen/padding_vertical_radio"
+        android:layout_marginTop="@dimen/def_margin"
+        android:backgroundTint="@color/lavender_blue"
+        android:text="@string/plus"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="@dimen/text_medium_size"
         android:fontFamily="@font/nunitobold"
-        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@id/textViewMinutesNo"
+        app:layout_constraintTop_toBottomOf="@id/editTextMedicineName" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonLogin"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/buttonDecreaseMinutes">
+        <RadioButton android:id="@+id/radio_before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitoregular"
+            android:text="@string/before"
+            android:buttonTint="@color/lavender_blue" />
+        <RadioButton android:id="@+id/radio_after"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitoregular"
+            android:text="@string/after"
+            android:buttonTint="@color/lavender_blue" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/imageViewMedicine"
+        android:layout_marginTop="@dimen/def_margin"
+        android:src="@drawable/upload_photo"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_height"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+    <Button
+        android:id="@+id/buttonDecreasePills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="@dimen/padding_horizontal_radio"
+        android:paddingVertical="@dimen/padding_vertical_radio"
+        android:layout_marginTop="@dimen/def_margin"
+        android:backgroundTint="@color/lavender_blue"
+        android:text="@string/minus"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_medium_size"
+        android:fontFamily="@font/nunitobold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewMedicine" />
 
     <TextView
-        android:id="@+id/textViewErrorLogin"
+        android:id="@+id/textViewPillsNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/def_margin"
-        android:visibility="gone"
-        android:text="@string/error_login"
-        android:textColor="@color/red"
+        android:paddingTop="@dimen/padding_horizontal_radio"
+        android:paddingHorizontal="@dimen/padding_horizontal_radio"
+        android:text="1"
+        android:textColor="@color/black_1"
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitoregular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonForgotPassword" />
+        app:layout_constraintStart_toEndOf="@id/buttonDecreasePills"
+        app:layout_constraintTop_toBottomOf="@id/imageViewMedicine" />
 
     <TextView
-        android:id="@+id/textViewAccount"
+        android:id="@+id/textViewPills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/def_margin"
-        android:text="@string/account_label"
+        android:paddingTop="@dimen/padding_horizontal_radio"
+        android:paddingHorizontal="@dimen/padding_horizontal_radio"
+        android:text="@string/pills"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toEndOf="@id/buttonIncreasePills"
+        app:layout_constraintTop_toBottomOf="@id/imageViewMedicine" />
+
+    <Button
+        android:id="@+id/buttonIncreasePills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="@dimen/padding_horizontal_radio"
+        android:paddingVertical="@dimen/padding_vertical_radio"
+        android:layout_marginTop="@dimen/def_margin"
+        android:backgroundTint="@color/lavender_blue"
+        android:text="@string/plus"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_medium_size"
+        android:fontFamily="@font/nunitobold"
+        app:layout_constraintStart_toEndOf="@id/textViewPillsNo"
+        app:layout_constraintTop_toBottomOf="@id/imageViewMedicine" />
+
+    <TextView
+        android:id="@+id/textViewDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:text="@string/medicine_details"
         android:textColor="@color/black_1"
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitoregular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/buttonSignUp"/>
+        app:layout_constraintTop_toBottomOf="@id/buttonDecreasePills" />
 
-    <TextView
-        android:id="@+id/buttonSignUp"
+    <EditText
+        android:id="@+id/editTextDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/min_margin"
+        android:background="@drawable/edittext_frame"
+        android:hint="@string/details"
+        android:textColor="@color/black_1"
+        android:textSize="@dimen/text_small_size"
+        android:fontFamily="@font/nunitoregular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDetails" />
+
+    <include
+        android:id="@+id/daypicker"
+        layout="@layout/daypicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/def_margin"
-        android:layout_marginLeft="@dimen/min_margin"
-        android:backgroundTint="@color/transparent"
-        android:text="@string/sign_up"
-        android:textColor="@color/lavender_blue"
-        android:textAllCaps="false"
-        android:textSize="@dimen/text_small_size"
-        android:fontFamily="@font/nunitobold"
-        android:clickable="true"
+        android:layout_marginTop="@dimen/min_margin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/editTextDetails"
+        ></include>
 
+    <TimePicker
+        android:id="@+id/timepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/daypicker" />
 
-
+    <Button
+        android:id="@+id/buttonAddMedicine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/def_margin"
+        android:backgroundTint="@color/lavender_blue"
+        android:text="@string/add_medicine"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_medium_size"
+        android:fontFamily="@font/nunitobold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timepicker"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
