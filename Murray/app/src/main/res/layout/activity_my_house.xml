@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyHouseActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/def_margin"
+        android:paddingRight="@dimen/def_margin"
+        android:paddingTop="@dimen/large_margin"
+        android:paddingBottom="@dimen/large_margin">
+
+        <TextView
+            android:id="@+id/textviewMyHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_house"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_large_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textviewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hardcoded_address"
+            android:layout_marginTop="@dimen/def_margin"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textviewMyHome" />
+
+        <ImageView
+            android:id="@+id/imageViewMedicine"
+            android:layout_marginTop="@dimen/def_margin"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_image_height"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textviewAddress" />
+
+        <TextView
+            android:id="@+id/textviewYourLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:textColor="@color/lavender_blue"
+            android:text="@string/selected_location"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewMedicine" />
+
+        <TextView
+            android:id="@+id/textViewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/hardcoded_details"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textviewYourLocation" />
+
+        <Button
+            android:id="@+id/buttonTakeMeHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:backgroundTint="@color/lavender_blue"
+            android:text="@string/take_me_home"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDetails"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

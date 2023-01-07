@@ -10,5 +10,7 @@
     <dimen name="padding_horizontal_radio">7dp</dimen>
     <dimen name="padding_vertical_radio">1dp</dimen>
     <dimen name="image_height">200dp</dimen>
+    <dimen name="large_image_height">400dp</dimen>
     <dimen name="divider_height">10dp</dimen>
+    <dimen name="padding_button">30dp</dimen>
 </resources>

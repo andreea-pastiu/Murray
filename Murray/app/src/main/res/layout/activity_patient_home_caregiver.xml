@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientHomeCaregiverActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/def_margin"
+        android:paddingRight="@dimen/def_margin"
+        android:paddingTop="@dimen/large_margin"
+        android:paddingBottom="@dimen/large_margin">
+
+        <TextView
+            android:id="@+id/textViewPatientsHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_home"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_large_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/location"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPatientsHome" />
+
+        <EditText
+            android:id="@+id/editTextLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_margin"
+            android:background="@drawable/edittext_frame"
+            android:hint="@string/enter_location"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewLocation" />
+
+        <TextView
+            android:id="@+id/textViewChooseLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/choose_map_location"
+            android:textColor="@color/lavender_blue"
+            android:textSize="@dimen/text_small_size"
+            android:clickable="true"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextLocation" />
+
+        <TextView
+            android:id="@+id/textViewLocationDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/location_details"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewChooseLocation" />
+
+        <EditText
+            android:id="@+id/editTextDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/min_margin"
+            android:background="@drawable/edittext_frame"
+            android:hint="@string/details"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewLocationDetails" />
+
+        <Button
+            android:id="@+id/buttonSaveHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:backgroundTint="@color/lavender_blue"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextDetails"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

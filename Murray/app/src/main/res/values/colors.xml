@@ -14,4 +14,6 @@
     <color name="red">#FFFF0000</color>
     <color name="gray">#FF83859C</color>
     <color name="border_details">#C7C8D2</color>
+    <color name="lime">#FF4EFF9F</color>
+    <color name="red_2">#FFFF4E4E</color>
 </resources>

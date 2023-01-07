@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactPageActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/def_margin"
+        android:paddingRight="@dimen/def_margin"
+        android:paddingTop="@dimen/large_margin"
+        android:paddingBottom="@dimen/large_margin">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_large_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textViewPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/phone_number"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+        <TextView
+            android:id="@+id/textViewPhoneNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPhoneNumber" />
+
+        <TextView
+            android:id="@+id/textViewRelationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/relationship"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPhoneNumber2" />
+        <TextView
+            android:id="@+id/textViewRelationship2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewRelationship" />
+
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:text="@string/address"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewRelationship2" />
+
+        <TextView
+            android:id="@+id/textViewAddress2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewAddress" />
+
+        <ImageView
+            android:id="@+id/imageViewContact"
+            android:layout_marginTop="@dimen/def_margin"
+            android:src="@drawable/upload_photo"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_height"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewAddress2" />
+
+        <Button
+            android:id="@+id/buttonCall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:layout_marginRight="@dimen/min_margin"
+            android:backgroundTint="@color/lavender_blue"
+            android:text="@string/call"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonVisit"
+            app:layout_constraintTop_toBottomOf="@id/imageViewContact"
+             />
+
+        <Button
+            android:id="@+id/buttonVisit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:layout_marginLeft="@dimen/min_margin"
+            android:backgroundTint="@color/lavender_blue"
+            android:text="@string/visit"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toEndOf="@id/buttonCall"
+            app:layout_constraintTop_toBottomOf="@id/imageViewContact"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

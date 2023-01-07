@@ -57,7 +57,7 @@ class LoginActivity : AppCompatActivity(), OnClickListener {
                         //val intent = Intent(this, HomePageActivity::class.java)
                         //intent.putExtra("type", "caregiver")
                         //startActivity(intent)
-                        val intent = Intent(this, ContactListCaregiverActivity::class.java)
+                        val intent = Intent(this, ContactListPatientActivity::class.java)
                         startActivity(intent)
                     } else {
                         if (emailEditText.text.toString() == "patient@gmail.com" && passwordEditText.text.toString() == "patient") {

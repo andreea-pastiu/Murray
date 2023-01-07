@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TakeMedicineActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/def_margin"
+        android:paddingRight="@dimen/def_margin"
+        android:paddingTop="@dimen/large_margin"
+        android:paddingBottom="@dimen/large_margin">
+
+        <TextView
+            android:id="@+id/textviewTakeMedicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/take_medicine"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_large_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textviewTakeMedicine" />
+
+        <TextView
+            android:id="@+id/textViewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/text_small_size"
+            android:fontFamily="@font/nunitoregular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+        <ImageView
+            android:id="@+id/imageViewMedicine"
+            android:layout_marginTop="@dimen/def_margin"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_height"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDetails" />
+
+        <Button
+            android:id="@+id/buttonMarkAsTaken"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:paddingVertical="@dimen/padding_button"
+            android:backgroundTint="@color/lime"
+            android:text="@string/mark_taken"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewMedicine"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/buttonTakeLater"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/def_margin"
+            android:paddingVertical="@dimen/padding_button"
+            android:backgroundTint="@color/red_2"
+            android:text="@string/take_later"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_medium_size"
+            android:fontFamily="@font/nunitobold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonMarkAsTaken"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

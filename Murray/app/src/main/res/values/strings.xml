@@ -62,4 +62,27 @@
     <string name="success_message_contact_added">Contact added</string>
     <string name="contacts_list">Contacts list</string>
     <string name="edit_contact">Edit contact</string>
+    <string name="patient_home">Patient\'s home</string>
+    <string name="location">Location</string>
+    <string name="enter_location">Enter location</string>
+    <string name="choose_map_location">Please choose map location</string>
+    <string name="location_details">Location Details</string>
+    <string name="save">Save</string>
+    <string name="location_not_entered">User location not entered</string>
+    <string name="error_title_patient_home">Cannot save patient\'s location</string>
+    <string name="success_message_home_saved">Patient\'s home saved</string>
+    <string name="take_medicine">Take medicine</string>
+    <string name="mark_taken">MARK AS TAKEN</string>
+    <string name="take_later">TAKE LATER</string>
+    <string name="chose_later">You chose to take the pills later!</string>
+    <string name="notify_later">New notification in 5 minutes</string>
+    <string name="chose_take">You took the pills!</string>
+    <string name="pills_marked">Pills marked as taken</string>
+    <string name="my_house">My house</string>
+    <string name="selected_location">Your selected location is at:</string>
+    <string name="take_me_home">Take me home</string>
+    <string name="hardcoded_address">5th Avenue 10</string>
+    <string name="hardcoded_details">3rd floor, brown door</string>
+    <string name="call">Call</string>
+    <string name="visit">Visit</string>
 </resources>
