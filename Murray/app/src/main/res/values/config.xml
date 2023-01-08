@@ -80,4 +80,49 @@
         <item>@drawable/joshdallas</item>
         <item>@drawable/matttaylor</item>
     </string-array>
+
+    <integer-array name="question_number_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </integer-array>
+
+    <string-array name="question_text_array">
+        <item>@string/question_1_text</item>
+        <item>@string/question_2_text</item>
+        <item>@string/question_3_text</item>
+        <item>@string/question_4_text</item>
+        <item>@string/question_5_text</item>
+    </string-array>
+
+    <string-array name="question_correct_answer_array">
+        <item>@string/question_1_correct_answer</item>
+        <item>@string/question_2_correct_answer</item>
+        <item>@string/question_3_correct_answer</item>
+        <item>@string/question_4_correct_answer</item>
+        <item>@string/question_5_correct_answer</item>
+    </string-array>
+
+    <string-array name="question_incorrect_answer_array">
+        <item>@string/question_1_incorrect_answer_1</item>
+        <item>@string/question_2_incorrect_answer_1</item>
+        <item>@string/question_3_incorrect_answer_1</item>
+        <item>@string/question_4_incorrect_answer_1</item>
+        <item>@string/question_5_incorrect_answer_1</item>
+        <item>@string/question_1_incorrect_answer_2</item>
+        <item>@string/question_2_incorrect_answer_2</item>
+        <item>@string/question_3_incorrect_answer_2</item>
+        <item>@string/question_4_incorrect_answer_2</item>
+        <item>@string/question_5_incorrect_answer_2</item>
+    </string-array>
+
+    <string-array name="question_details_array">
+        <item>@string/question_1_details</item>
+        <item>@string/question_2_details</item>
+        <item>@string/question_3_details</item>
+        <item>@string/question_4_details</item>
+        <item>@string/question_5_details</item>
+    </string-array>
 </resources>
