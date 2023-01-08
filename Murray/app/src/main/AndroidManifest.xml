@@ -189,6 +189,22 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".LocationAdminActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LocationFormActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
     </application>
 
 </manifest>

@@ -110,4 +110,15 @@
     <string name="question_3_details">You got married after you finished your military training, at 20 years old.</string>
     <string name="question_4_details">He loves to eat pizza, and prefers the simple margherita one.</string>
     <string name="question_5_details">You always loved space, and you merged technology with the stars, creating TechStar.</string>
+    <string name="location_1_name">Pharmacy</string>
+    <string name="location_2_name">Son\'s house</string>
+    <string name="location_3_name">Retirement club</string>
+    <string name="location_4_name">Hospital</string>
+    <string name="location_5_name">Grocery store</string>
+    <string name="location_1_address">Magnoliei street, no. 8</string>
+    <string name="location_2_address">Paris Street, no. 13</string>
+    <string name="location_3_address">Memorandumului Alley, no. 7</string>
+    <string name="location_4_address">Clinicilor Street, no. 19</string>
+    <string name="location_5_address">Fabricii Street, no. 55</string>
+
 </resources>

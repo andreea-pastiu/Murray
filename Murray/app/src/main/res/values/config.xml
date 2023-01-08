@@ -125,4 +125,20 @@
         <item>@string/question_4_details</item>
         <item>@string/question_5_details</item>
     </string-array>
+
+    <string-array name="location_name_array">
+        <item>@string/location_1_name</item>
+        <item>@string/location_2_name</item>
+        <item>@string/location_3_name</item>
+        <item>@string/location_4_name</item>
+        <item>@string/location_5_name</item>
+    </string-array>
+
+    <string-array name="location_address_array">
+        <item>@string/location_1_address</item>
+        <item>@string/location_2_address</item>
+        <item>@string/location_3_address</item>
+        <item>@string/location_4_address</item>
+        <item>@string/location_5_address</item>
+    </string-array>
 </resources>
