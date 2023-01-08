@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizUserActivity">
+
+    <ImageView
+        android:id="@+id/imageViewBackButton"
+        android:layout_width="53dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back_button"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Murray"
+        android:textSize="40sp"
+        android:textColor="#6677F7"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunitoextrabold"/>
+
+    <View
+        android:id="@+id/viewLine1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D6DBFF"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle1"
+        app:layout_constraintStart_toStartOf="@id/textViewTitle1"/>
+
+    <TextView
+        android:id="@+id/textViewTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memory assistant"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/nunitosemibold"
+        app:layout_constraintTop_toBottomOf="@id/viewLine1"/>
+
+    <TextView
+        android:id="@+id/textViewDailyQuizTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily quiz"
+        android:textSize="36sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginTop="@dimen/def_medium_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/viewLine2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#D6DBFF"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginBottom="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/textViewDailyQuizTitle"
+        app:layout_constraintStart_toStartOf="@id/textViewDailyQuizTitle"/>
+
+    <ImageView
+        android:id="@+id/imageViewQuestionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/user_question_container"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/viewLine2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewQuestionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        app:layout_constraintTop_toTopOf="@id/imageViewQuestionContainer"
+        app:layout_constraintStart_toStartOf="@id/imageViewQuestionContainer"/>
+
+    <TextView
+        android:id="@+id/textViewQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginStart="@dimen/def_small_margin_start"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        app:layout_constraintTop_toTopOf="@id/imageViewQuestionContainer"
+        app:layout_constraintStart_toEndOf="@id/textViewQuestionTitle"/>
+
+    <TextView
+        android:id="@+id/textViewQuestionText"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="This is the question text"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitoregular"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginTop="@dimen/def_very_small_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/textViewQuestionTitle"
+        app:layout_constraintStart_toStartOf="@id/imageViewQuestionContainer"/>
+
+    <TextView
+        android:id="@+id/textViewOptionSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select one option"
+        android:textSize="20sp"
+        android:textColor="#6677F7"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/imageViewQuestionContainer"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonAnswer1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_container"
+        android:text="Answer 1"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:fontFamily="@font/nunitobold"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/textViewOptionSelect"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonAnswer2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_container"
+        android:text="Answer 2"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:fontFamily="@font/nunitobold"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/buttonAnswer1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonAnswer3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_container"
+        android:text="Answer 3"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:fontFamily="@font/nunitobold"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/def_small_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintTop_toBottomOf="@id/buttonAnswer2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/viewLine3"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#D6DBFF"
+        android:layout_marginBottom="@dimen/def_medium_large_margin_top"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginEnd="@dimen/def_margin_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textViewDailyQuizTitle"/>
+
+    <TextView
+        android:id="@+id/textViewCurrentQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginStart="@dimen/def_margin_start"
+        android:layout_marginBottom="@dimen/def_very_small_margin_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewTotalQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/3"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunitobold"
+        android:layout_marginBottom="@dimen/def_very_small_margin_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewCurrentQuestionNumber"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
