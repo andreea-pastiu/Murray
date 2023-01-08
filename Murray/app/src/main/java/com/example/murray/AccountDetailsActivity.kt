@@ -42,6 +42,7 @@ class AccountDetailsActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
+        //TODO("Validate the names")
         when (p0) {
             backButtonImageView -> onBackPressed()
             updateButton -> onBackPressed()

@@ -141,6 +141,54 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".QuizAdminActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".QuizFormActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".QuizUserActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".QuestionCorrectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".QuestionIncorrectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".QuizUserFinishedActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
     </application>
 
 </manifest>
