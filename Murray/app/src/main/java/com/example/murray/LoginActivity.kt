@@ -63,7 +63,7 @@ class LoginActivity : AppCompatActivity(), OnClickListener {
                         if (emailEditText.text.toString() == "patient@gmail.com" && passwordEditText.text.toString() == "patient") {
                             errorLoginTextView.visibility = GONE
                             //go to Home Page
-                            val intent = Intent(this, LocationPatientActivity::class.java)
+                            val intent = Intent(this, QuizUserActivity::class.java)
                             //intent.putExtra("type", "patient")
                             startActivity(intent)
                         } else {

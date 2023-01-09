@@ -1,6 +1,5 @@
 package com.example.murray
 
-import android.R.array
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.murray.model.QuestionModel
 import java.util.*
 import kotlin.collections.ArrayList
-
 
 class QuizUserActivity : AppCompatActivity(), View.OnClickListener {
 
