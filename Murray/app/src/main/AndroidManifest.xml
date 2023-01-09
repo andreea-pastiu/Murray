@@ -205,6 +205,22 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".LocationPatientActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LocationPatientFormActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
     </application>
 
 </manifest>

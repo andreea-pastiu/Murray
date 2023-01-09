@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="190dp"
+    android:layout_height="190dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="#D6DBFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="25dp"
+            app:cardBackgroundColor="#F3F4FF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewLocationPin"
+                    android:layout_width="56dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/def_medium_margin_top"
+                    android:src="@drawable/location_pin" />
+
+                <TextView
+                    android:id="@+id/textViewLocationName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Retirement club"
+                    android:textColor="#4E60FF"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nunitobold"
+                    android:layout_marginTop="@dimen/def_very_small_margin_top"
+                    android:layout_marginStart="@dimen/def_very_very_small_margin_top"
+                    android:layout_marginEnd="@dimen/def_very_very_small_margin_top"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
