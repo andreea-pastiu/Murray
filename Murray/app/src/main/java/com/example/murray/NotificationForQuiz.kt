@@ -5,15 +5,14 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import androidx.core.app.NotificationCompat
 
-const val notificationID = 1
-const val channelID = "channel1"
+var notificationID_Quiz = 1
+const val channel2ID = "channel2"
 const val notificationTitle = "Daily quiz"
 const val notificationMessage = "It's quiz time!"
 
-class QuizNotification : BroadcastReceiver()
+class NotificationForQuiz : BroadcastReceiver()
 {
     override fun onReceive(context: Context, intent: Intent)
     {
@@ -26,7 +25,7 @@ class QuizNotification : BroadcastReceiver()
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_ONE_SHOT
         )
 
-        val notification = NotificationCompat.Builder(context, channelID)
+        val notification = NotificationCompat.Builder(context, channel2ID)
             .setSmallIcon(R.drawable.notification_icon)
             .setContentTitle(notificationTitle)
             .setContentText(notificationMessage)
@@ -35,6 +34,6 @@ class QuizNotification : BroadcastReceiver()
             .build()
 
         val  manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        manager.notify(notificationID, notification)
+        manager.notify(notificationID_Quiz, notification)
     }
 }

@@ -49,11 +49,12 @@ class QuizUserFinishedActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun scheduleNotification() {
-        val intent = Intent(applicationContext, QuizNotification::class.java)
+        val intent = Intent(applicationContext, NotificationForQuiz::class.java)
 
+        notificationID_Quiz += 1
         val pendingIntent = PendingIntent.getBroadcast(
             applicationContext,
-            notificationID,
+            notificationID_Quiz,
             intent,
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
@@ -99,7 +100,7 @@ class QuizUserFinishedActivity : AppCompatActivity(), View.OnClickListener {
         val name = "Notification Channel"
         val desc = "Channel to send informatory notification to announce a patient to take the daily quiz."
         val importance = NotificationManager.IMPORTANCE_DEFAULT
-        val channel = NotificationChannel(channelID, name, importance)
+        val channel = NotificationChannel(channel2ID, name, importance)
         channel.description = desc
         val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.createNotificationChannel(channel)
