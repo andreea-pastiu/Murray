@@ -62,7 +62,7 @@
             android:textSize="30sp"
             android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
-            android:fontFamily="@font/nunitoextrabold"/>
+            android:fontFamily="@font/nunitobold"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -169,7 +169,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginStart="10dp">
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
 
                     <CheckBox
                         android:id="@+id/checkbox_sunday"
