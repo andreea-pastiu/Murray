@@ -12,15 +12,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageViewBackButton"
-            android:layout_width="53dp"
-            android:layout_height="30dp"
-            android:background="@drawable/back_button"
-            android:layout_marginTop="@dimen/def_small_margin_top"
-            android:layout_marginStart="@dimen/def_margin_start"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="0"
+            android:id="@+id/linearLayoutLogo"
+            android:layout_marginEnd="@dimen/def_margin_start"
+            android:layout_marginTop="@dimen/def_margin_start">
 
         <TextView
             android:id="@+id/textViewTitle1"
@@ -32,6 +38,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:textAlignment="center"
             android:fontFamily="@font/nunitoextrabold"/>
+
 
         <View
             android:id="@+id/viewLine1"
@@ -53,6 +60,19 @@
             android:textAlignment="center"
             android:fontFamily="@font/nunitosemibold"
             app:layout_constraintTop_toBottomOf="@id/viewLine1"/>
+        </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewAccountButton"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/account_box"
+                app:layout_constraintStart_toEndOf="@id/linearLayoutLogo"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
 
         <GridLayout
             android:layout_marginTop="20dp"

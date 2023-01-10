@@ -11,17 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <ImageView
-            android:id="@+id/imageViewBackButton"
-            android:layout_width="53dp"
-            android:layout_height="30dp"
-            android:background="@drawable/back_button"
-            android:layout_marginTop="@dimen/def_small_margin_top"
-            android:layout_marginStart="@dimen/def_margin_start"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
-
         <TextView
             android:id="@+id/textViewTitle1"
             android:layout_width="match_parent"
@@ -84,7 +73,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/textViewSurnameLabel"
+                    android:id="@+id/textViewActivityName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/def_margin_start"

@@ -1,5 +1,8 @@
 package com.example.murray
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -8,7 +11,6 @@ import androidx.cardview.widget.CardView
 
 
 class MainPageActivity: AppCompatActivity(), View.OnClickListener {
-    private lateinit var backButtonImageView: ImageView
     private lateinit var homeButton: CardView
     private lateinit var locationsButton: CardView
     private lateinit var quizButton: CardView
@@ -17,6 +19,7 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
     private lateinit var shoppingButton: CardView
     private lateinit var contactsButton: CardView
     private lateinit var accountType: String
+    private lateinit var accountButton: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,8 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
         accountType = intent.getStringExtra("type").toString()
         initializeViews()
         setListeners()
+        createNotificationChannel()
+
     }
 
     private fun initializeViews() {
@@ -34,12 +39,11 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
         activitiesButton = findViewById(R.id.cardViewActivities)
         shoppingButton = findViewById(R.id.cardViewShopping)
         contactsButton = findViewById(R.id.cardViewContacts)
-        backButtonImageView = findViewById(R.id.imageViewBackButton)
+        accountButton = findViewById(R.id.imageViewAccountButton)
 
     }
 
     private fun setListeners() {
-        backButtonImageView.setOnClickListener(this)
         homeButton.setOnClickListener(this)
         locationsButton.setOnClickListener(this)
         quizButton.setOnClickListener(this)
@@ -47,14 +51,12 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
         activitiesButton.setOnClickListener(this)
         shoppingButton.setOnClickListener(this)
         contactsButton.setOnClickListener(this)
+        accountButton.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        when (v!!.id) {
-            R.id.imageViewBackButton -> {
-
-            }
-            R.id.cardViewHome -> {
+        when (v) {
+            homeButton -> {
                 if (accountType == "caregiver") {
 
                 }
@@ -62,7 +64,7 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
 
                 }
             }
-            R.id.cardViewLocations -> {
+            locationsButton -> {
                 if (accountType == "caregiver") {
 
                 }
@@ -70,7 +72,7 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
 
                 }
             }
-            R.id.cardViewQuiz -> {
+            quizButton -> {
                 if (accountType == "caregiver") {
 
                 }
@@ -78,7 +80,7 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
 
                 }
             }
-            R.id.cardViewMedication -> {
+            medicationButton -> {
                 if (accountType == "caregiver") {
 
                 }
@@ -86,7 +88,15 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
 
                 }
             }
-            R.id.cardViewActivities -> {
+            activitiesButton -> {
+                val intent = Intent(this,ViewListActivitiesActivity::class.java)
+                startActivity(intent)
+            }
+           shoppingButton -> {
+                val intent = Intent(this,ViewShoppingListActivity::class.java)
+                startActivity(intent)
+            }
+            contactsButton -> {
                 if (accountType == "caregiver") {
 
                 }
@@ -94,25 +104,23 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
 
                 }
             }
-            R.id.cardViewShopping -> {
-                if (accountType == "caregiver") {
-
-                }
-                else {
-
-                }
-            }
-            R.id.cardViewContacts -> {
-                if (accountType == "caregiver") {
-
-                }
-                else {
-
-                }
+            accountButton -> {
+                val intent = Intent(this,AccountActivity::class.java)
+                startActivity(intent)
             }
             else -> {}
         }
     }
 
+    private fun createNotificationChannel()
+    {
+        val name = "Activities Channel"
+        val desc = "A Description of the Channel"
+        val importance = NotificationManager.IMPORTANCE_DEFAULT
+        val channel = NotificationChannel(channelID_Activity, name, importance)
+        channel.description = desc
+        val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.createNotificationChannel(channel)
+    }
 
 }

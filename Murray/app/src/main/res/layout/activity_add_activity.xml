@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textViewSurnameLabel"
+                android:id="@+id/textViewActivityName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/def_margin_start"
@@ -97,7 +97,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextSurname"
+                android:id="@+id/editTextActivityName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/def_margin_start"
@@ -105,13 +105,12 @@
                 android:layout_marginEnd="@dimen/def_margin_start"
                 android:background="@drawable/shape"
                 android:padding="15dp"
-                android:text="Enter activity name"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textViewSurnameLabel" />
+                app:layout_constraintTop_toBottomOf="@id/textViewActivityName" />
 
             <TextView
-                android:id="@+id/textViewNameLabel"
+                android:id="@+id/textViewActivityDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/def_margin_start"
@@ -120,10 +119,10 @@
                 android:text="Descrption"
                 android:textColor="#545563"
                 android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@id/editTextSurname" />
+                app:layout_constraintTop_toBottomOf="@id/editTextActivityName" />
 
             <EditText
-                android:id="@+id/editTextName"
+                android:id="@+id/editTextDescription"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:layout_marginStart="@dimen/def_margin_start"
@@ -131,43 +130,127 @@
                 android:layout_marginEnd="@dimen/def_margin_start"
                 android:background="@drawable/shape"
                 android:padding="15dp"
-                android:text="Enter description"
                 android:gravity="top"
                 android:inputType="textMultiLine"
                 android:lines="5"
                 android:singleLine="false"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textViewNameLabel" />
+                app:layout_constraintTop_toBottomOf="@id/textViewActivityDescription" />
 
-                <LinearLayout android:layout_width="335dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewSelectDate"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/def_margin_start"
                     android:layout_marginTop="@dimen/def_margin"
-                    android:layout_marginStart="@dimen/def_margin">
+                    android:fontFamily="@font/nunitosemibold"
+                    android:text="Select date"
+                    android:textColor="#545563"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@id/editTextDescription" />
 
-                    <Button
-                        android:id="@+id/buttonDate"
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Select Date"
-                        android:onClick="DateTimeClickCancel" />
+                <ImageView
+                    android:id="@+id/buttonDate"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_activities_calendar"
+                    app:layout_constraintTop_toBottomOf="@id/editTextDescription"
+                    app:layout_constraintStart_toEndOf="@id/textViewSelectDate"/>
+            </LinearLayout>
 
-                    <Button
-                        android:id="@+id/buttonTime"
-                        android:layout_width="20dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_sunday"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="@dimen/def_margin"
-                        android:text="Select Time"
-                        android:onClick="DateTimeClickOK" />
+                        android:text="S" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_monday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="M" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_tuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="T" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="W" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_thursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="T" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_friday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="F" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_saturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S" />
                 </LinearLayout>
 
-<!--                <com.dpro.widgets.WeekdaysPicker-->
-<!--                    android:id="@+id/weekdays"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:sunday_first_day="false" />-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewSelectTime"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/def_margin_start"
+                        android:layout_marginTop="@dimen/def_margin"
+                        android:fontFamily="@font/nunitosemibold"
+                        android:text="Select time"
+                        android:textColor="#545563"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/editTextDescription" />
+
+                    <ImageView
+                        android:id="@+id/buttonTime"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/time"
+                        app:layout_constraintTop_toBottomOf="@id/editTextDescription"
+                        app:layout_constraintStart_toEndOf="@id/textViewSelectDate"/>
+                </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonSaveActivity"
+                        android:layout_width="match_parent"
+                        android:backgroundTint="@color/lavender_blue"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginStart="@dimen/def_margin"
+                        android:layout_marginEnd="@dimen/def_margin"
+                        android:text="Save activity" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

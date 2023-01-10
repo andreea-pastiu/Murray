@@ -53,10 +53,9 @@ class LoginActivity : AppCompatActivity(), OnClickListener {
                 if(view?.id == R.id.buttonLogin) {
                     if(emailEditText.text.toString() == "caregiver@gmail.com" && passwordEditText.text.toString() == "caregiver"){
                         errorLoginTextView.visibility = GONE
-                        //go to Home Page
-                        //val intent = Intent(this, HomePageActivity::class.java)
-                        //intent.putExtra("type", "caregiver")
-                        //startActivity(intent)
+                        val intent = Intent(this, MainPageActivity::class.java)
+                        intent.putExtra("type", "caregiver")
+                        startActivity(intent)
                     } else {
                         if (emailEditText.text.toString() == "patient@gmail.com" && passwordEditText.text.toString() == "patient") {
                             errorLoginTextView.visibility = GONE

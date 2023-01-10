@@ -1,29 +1,32 @@
 package com.example.murray
 
-import android.content.Intent
+import android.app.Dialog
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ListView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.murray.adapters.ActivitiesAdapter
 import com.example.murray.adapters.ShoppingListAdapter
-import com.example.murray.model.Activity
 import com.example.murray.model.ShoppingListItem
 
 class ViewShoppingListActivity: AppCompatActivity(), View.OnClickListener {
     private lateinit var backButtonImageView: ImageView
-    private lateinit var addShoppingListItemButton: Button
-    private lateinit var accountType: String
+    private lateinit var addShoppingListItemButton: ImageView
     private lateinit var listView: ListView
     private lateinit var shoppingAdapter: ShoppingListAdapter
     private var shoppingList = mutableListOf<ShoppingListItem>() as ArrayList<ShoppingListItem>
+    private lateinit var cancelButton: Button
+    private lateinit var saveButton: Button
+    private lateinit var newItem: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_activities_list)
+        setContentView(R.layout.activity_shopping_list)
         initializeViews()
         setListeners()
         setListView()
@@ -31,7 +34,7 @@ class ViewShoppingListActivity: AppCompatActivity(), View.OnClickListener {
 
     private fun initializeViews() {
         addShoppingListItemButton = findViewById(R.id.imageViewAddShoppingItemButton)
-        listView = findViewById(R.id.listViewActivities)
+        listView = findViewById(R.id.listViewShopping)
         backButtonImageView = findViewById(R.id.imageViewBackButton)
 
     }
@@ -42,13 +45,39 @@ class ViewShoppingListActivity: AppCompatActivity(), View.OnClickListener {
 
     }
 
+    private fun showDialog() {
+        val dialog = Dialog(this)
+//        val window = dialog.window
+//        val layoutParams = WindowManager.LayoutParams()
+//        layoutParams.copyFrom(window?.attributes)
+//        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT
+//        layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT
+//        window?.attributes = layoutParams
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.dialog_custom_add_shopping_item)
+
+        saveButton = dialog.findViewById(R.id.buttonAddToShoppingList)
+        cancelButton = dialog.findViewById(R.id.buttonCancelShoppingList)
+        newItem = dialog.findViewById(R.id.editTextEnterItem)
+
+        saveButton.setOnClickListener {
+            shoppingList.add(ShoppingListItem(newItem.text.toString()))
+            dialog.dismiss()
+        }
+        cancelButton.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
+    }
+
     override fun onClick(v: View?) {
-        when (v!!.id) {
-            R.id.imageViewBackButton -> {
+        when (v) {
+            backButtonImageView -> {
 
             }
-            R.id.imageViewAddActivityButton -> {
-                //dialog box
+            addShoppingListItemButton -> {
+                showDialog()
             }
         }
     }

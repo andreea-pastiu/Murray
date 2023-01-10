@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.murray.R
 import com.example.murray.model.ShoppingListItem
@@ -26,9 +27,14 @@ class ShoppingListAdapter(private val context: Context, private val dataSource: 
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
         val rowView = p1 ?: inflater.inflate(
-            R.layout.list_activitiy_item, p2, false
+            R.layout.list_shopping_item, p2, false
         )
         rowView.findViewById<TextView>(R.id.textViewShoppingItem).text = dataSource[p0].name
+        val button = rowView.findViewById<ImageView>(R.id.imageViewDelete)
+        button.setOnClickListener {
+            dataSource.removeAt(p0)
+            notifyDataSetChanged()
+        }
         return rowView;
     }
 }

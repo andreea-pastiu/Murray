@@ -1,3 +1,3 @@
 package com.example.murray.model
 
-data class Activity( val name: String, val details: String, val time: String, val status: String)
+data class Activity(var name: String, var details: String, var time: String, var status: String, var date: String, var recurrence: MutableList<Int>): java.io.Serializable

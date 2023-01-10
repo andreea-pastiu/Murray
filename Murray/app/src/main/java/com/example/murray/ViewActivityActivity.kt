@@ -41,11 +41,11 @@ class ViewActivityActivity: AppCompatActivity(), View.OnClickListener {
 
     private fun setData() {
         activityName = intent.getStringExtra("activity_name").toString()
-        activityDetails = intent.getStringExtra("activity_details").toString()
+        activityDetails = intent.getStringExtra("activity_description").toString()
         activityTime = intent.getStringExtra("activity_time").toString()
 
         textViewActivityName.text = activityName
         textViewActivityDetails.text = activityDetails
-        textViewActivityTime.text = activityTime
+        textViewActivityTime.text = "Do activity at " + activityTime
     }
 }
