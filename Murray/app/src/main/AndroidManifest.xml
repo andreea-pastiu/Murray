@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
-
+    
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <application
         android:allowBackup="true"
@@ -225,6 +224,60 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".MainPageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AddActivityActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewActivityActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewListActivitiesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewShoppingListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".DoActivityActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <receiver
+            android:name=".NotificationForActivity"
+            android:enabled="true"/>
+
     </application>
 
 </manifest>
