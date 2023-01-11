@@ -51,6 +51,7 @@ class DoActivityActivity: AppCompatActivity(), View.OnClickListener {
             }
             buttonActivityLater -> {
                 scheduleNotification()
+                finish()
             }
         }
     }

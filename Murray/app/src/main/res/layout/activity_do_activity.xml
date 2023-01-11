@@ -46,12 +46,12 @@
             android:id="@+id/textViewActivityView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Activity"
+            android:text="Do Activity"
             android:layout_marginLeft="16dp"
             android:textSize="30sp"
             android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
-            android:fontFamily="@font/nunitoextrabold"/>
+            android:fontFamily="@font/nunitobold"/>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="530dp"

@@ -178,42 +178,49 @@
                         android:id="@+id/checkbox_sunday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/lavender_blue"
                         android:text="S" />
 
                     <CheckBox
                         android:id="@+id/checkbox_monday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/lavender_blue"
                         android:text="M" />
 
                     <CheckBox
                         android:id="@+id/checkbox_tuesday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/lavender_blue"
                         android:text="T" />
 
                     <CheckBox
                         android:id="@+id/checkbox_wednesday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/lavender_blue"
                         android:text="W" />
 
                     <CheckBox
                         android:id="@+id/checkbox_thursday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/lavender_blue"
                         android:text="T" />
 
                     <CheckBox
                         android:id="@+id/checkbox_friday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/lavender_blue"
                         android:text="F" />
 
                     <CheckBox
                         android:id="@+id/checkbox_saturday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/lavender_blue"
                         android:text="S" />
                 </LinearLayout>
 

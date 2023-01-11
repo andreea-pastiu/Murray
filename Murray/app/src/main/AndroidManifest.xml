@@ -17,84 +17,96 @@
             android:enabled="true"/>
         <activity
             android:name=".ContactPageActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ContactListPatientActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MyHouseActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".TakeMedicineActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MedicineListPatientActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".PatientHomeCaregiverActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ContactListCaregiverActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".AddContactActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MedicineListCaregiverActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".AddMedicineActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ForgotPasswordActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -102,7 +114,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.Design.Light">
+            android:theme="@style/Theme.Murray">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -115,7 +127,8 @@
         </activity>
         <activity
             android:name=".AccountActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -123,7 +136,7 @@
         <activity
             android:name=".AccountDetailsActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light">
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -131,7 +144,7 @@
         <activity
             android:name=".AccountPasswordActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light">
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -139,7 +152,7 @@
         <activity
             android:name=".AccountProblemActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light">
+            android:theme="@style/Theme.Murray">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -147,7 +160,7 @@
         <activity
             android:name=".QuizAdminActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -155,7 +168,7 @@
         <activity
             android:name=".QuizFormActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -163,7 +176,7 @@
         <activity
             android:name=".QuizUserActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -171,7 +184,7 @@
         <activity
             android:name=".QuestionCorrectActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -179,7 +192,7 @@
         <activity
             android:name=".QuestionIncorrectActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -187,7 +200,7 @@
         <activity
             android:name=".QuizUserFinishedActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -195,7 +208,7 @@
         <activity
             android:name=".LocationAdminActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -203,7 +216,7 @@
         <activity
             android:name=".LocationFormActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -211,7 +224,7 @@
         <activity
             android:name=".LocationPatientActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -219,7 +232,7 @@
         <activity
             android:name=".LocationPatientFormActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -227,7 +240,7 @@
         <activity
             android:name=".MainPageActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -235,7 +248,7 @@
         <activity
             android:name=".AddActivityActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -243,7 +256,7 @@
         <activity
             android:name=".ViewActivityActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -251,7 +264,7 @@
         <activity
             android:name=".ViewListActivitiesCaregiverActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -259,7 +272,7 @@
         <activity
             android:name=".ViewListActivitiesPatientActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -267,7 +280,7 @@
         <activity
             android:name=".ViewShoppingListActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -276,7 +289,7 @@
         <activity
             android:name=".DoActivityActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light" >
+            android:theme="@style/Theme.Murray" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
