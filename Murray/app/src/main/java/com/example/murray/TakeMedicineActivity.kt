@@ -1,6 +1,11 @@
 package com.example.murray
 
+import android.app.AlarmManager
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +15,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import java.util.*
 
 class TakeMedicineActivity : AppCompatActivity(), OnClickListener {
 
@@ -27,6 +33,7 @@ class TakeMedicineActivity : AppCompatActivity(), OnClickListener {
         initializeViews()
         populateViews()
         setListeners()
+        createNotificationChannelMedicine()
     }
 
     private fun initializeViews() {
@@ -44,8 +51,8 @@ class TakeMedicineActivity : AppCompatActivity(), OnClickListener {
 
     private fun populateViews() {
         textViewName.text = intent.getStringExtra("name")
-        var details = "Take " + intent.getDoubleExtra("pills", 0.0) + " pills of this medicine" +
-                intent.getIntExtra("minutes ", 0)
+        var details = "Take " + intent.getDoubleExtra("pills ", 0.0) + " pills of this medicine " +
+                intent.getIntExtra("minutes ", 0) + " minutes "
         if(intent.getBooleanExtra("before", false)){
             details += "before eating"
         }
@@ -67,6 +74,7 @@ class TakeMedicineActivity : AppCompatActivity(), OnClickListener {
             val alertDialog: AlertDialog = builder.create()
             alertDialog.setCancelable(false)
             alertDialog.show()
+            scheduleNotification()
         }
         if(view?.id == R.id.buttonMarkAsTaken){
             val builder = AlertDialog.Builder(context)
@@ -79,5 +87,42 @@ class TakeMedicineActivity : AppCompatActivity(), OnClickListener {
             alertDialog.setCancelable(false)
             alertDialog.show()
         }
+    }
+
+    private fun scheduleNotification() {
+        val intent = Intent(applicationContext, NotificationForMedicine::class.java)
+        intent.putExtra( "name", intent.getStringExtra("name"))
+        intent.putExtra( "pills", intent.getDoubleExtra("pills", 0.0))
+        intent.putExtra( "minutes", intent.getIntExtra("minutes", 0))
+        intent.putExtra( "before", intent.getBooleanExtra("before", false))
+        intent.putExtra( "index", intent.getIntExtra("index", 0))
+
+        notificationID_Medicine += 1
+        val pendingIntent = PendingIntent.getBroadcast(
+            applicationContext,
+            notificationID_Medicine,
+            intent,
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+        )
+
+        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val calendar = Calendar.getInstance()
+        val time = calendar.timeInMillis + (1 * 10 * 1000)
+        alarmManager.setExactAndAllowWhileIdle(
+            AlarmManager.RTC_WAKEUP,
+            time,
+            pendingIntent
+        )
+    }
+
+    private fun createNotificationChannelMedicine()
+    {
+        val name = "Medicines Channel"
+        val desc = "A Description of the Channel"
+        val importance = NotificationManager.IMPORTANCE_DEFAULT
+        val channel = NotificationChannel(channelID_Medicine, name, importance)
+        channel.description = desc
+        val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.createNotificationChannel(channel)
     }
 }

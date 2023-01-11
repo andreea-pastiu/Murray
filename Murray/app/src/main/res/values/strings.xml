@@ -120,5 +120,14 @@
     <string name="location_3_address">Memorandumului Alley, no. 7</string>
     <string name="location_4_address">Clinicilor Street, no. 19</string>
     <string name="location_5_address">Fabricii Street, no. 55</string>
+    <string name="firstName_required">First Name is required</string>
+    <string name="lastName_required">Last Name is required!</string>
+    <string name="email_required">Email is required!</string>
+    <string name="password_required">Password is required!</string>
+    <string name="password_length_error">Password length should be at least 6 characters long!</string>
+    <string name="passwords_do_not_match">Re-entered password does not match with the password!</string>
+    <string name="error_title_register">Error!</string>
+    <string name="success_message_register">Registration successful!</string>
+    <string name="success_message_forgot_password">Recovery e-mail sent!</string>
 
 </resources>

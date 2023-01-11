@@ -1,5 +1,9 @@
 package com.example.murray
 
+import android.app.AlarmManager
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +13,7 @@ import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 
 class AddMedicineActivity : AppCompatActivity(), OnClickListener {
@@ -32,6 +37,7 @@ class AddMedicineActivity : AppCompatActivity(), OnClickListener {
     private lateinit var tSu: ToggleButton
     private lateinit var timepicker: TimePicker
     private lateinit var textViewAddMedicine: TextView
+    private var recurrence =  mutableListOf<Int>()
     private var context: Context = this
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

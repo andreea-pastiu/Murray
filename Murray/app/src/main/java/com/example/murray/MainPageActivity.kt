@@ -58,10 +58,12 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
         when (v) {
             homeButton -> {
                 if (accountType == "caregiver") {
-
+                    val intent = Intent(this,PatientHomeCaregiverActivity::class.java)
+                    startActivity(intent)
                 }
                 else {
-
+                    val intent = Intent(this,MyHouseActivity::class.java)
+                    startActivity(intent)
                 }
             }
             locationsButton -> {
@@ -82,10 +84,12 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
             }
             medicationButton -> {
                 if (accountType == "caregiver") {
-
+                    val intent = Intent(this,MedicineListCaregiverActivity::class.java)
+                    startActivity(intent)
                 }
                 else {
-
+                    val intent = Intent(this,MedicineListPatientActivity::class.java)
+                    startActivity(intent)
                 }
             }
             activitiesButton -> {
@@ -105,10 +109,12 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
             }
             contactsButton -> {
                 if (accountType == "caregiver") {
-
+                    val intent = Intent(this,ContactListCaregiverActivity::class.java)
+                    startActivity(intent)
                 }
                 else {
-
+                    val intent = Intent(this,ContactListPatientActivity::class.java)
+                    startActivity(intent)
                 }
             }
             accountButton -> {

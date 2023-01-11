@@ -164,6 +164,7 @@
         android:layout_marginTop="@dimen/min_margin"
         android:text="@string/checkbox_caregiver"
         android:textColor="@color/black"
+        android:buttonTint="@color/lavender_blue"
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitoregular"
         app:layout_constraintStart_toStartOf="parent"

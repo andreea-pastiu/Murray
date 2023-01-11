@@ -43,6 +43,7 @@
         android:id="@+id/checkboxTake"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:buttonTint="@color/lavender_blue"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

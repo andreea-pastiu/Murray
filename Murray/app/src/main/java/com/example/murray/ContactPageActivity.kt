@@ -57,7 +57,7 @@ class ContactPageActivity : AppCompatActivity(), OnClickListener {
     override fun onClick(view: View?) {
         if(view?.id == R.id.buttonCall){
             val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:" + intent.getStringExtra("phone"))
+            intent.data = Uri.parse("tel:" + textViewPhoneNumber2.text)
             startActivity(intent)
         }
         if(view?.id == R.id.buttonVisit){

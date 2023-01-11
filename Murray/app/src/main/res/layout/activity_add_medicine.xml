@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/def_margin"
-        android:text="@string/email"
+        android:text="@string/name"
         android:textColor="@color/black_1"
         android:textSize="@dimen/text_small_size"
         android:fontFamily="@font/nunitoregular"

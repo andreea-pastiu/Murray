@@ -287,6 +287,10 @@
             android:name=".NotificationForActivity"
             android:enabled="true"/>
 
+        <receiver
+            android:name=".NotificationForMedicine"
+            android:enabled="true"/>
+
     </application>
 
 </manifest>
