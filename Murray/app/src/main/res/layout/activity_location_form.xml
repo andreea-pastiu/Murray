@@ -64,7 +64,7 @@
     <ImageView
         android:id="@+id/imageViewLocationFormContainer"
         android:layout_width="match_parent"
-        android:layout_height="540dp"
+        android:layout_height="520dp"
         android:background="@drawable/quiz_form_container"
         android:layout_marginTop="@dimen/def_small_margin_top"
         android:layout_marginStart="@dimen/def_margin_start"

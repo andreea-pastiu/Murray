@@ -27,6 +27,7 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var userName: String
     private lateinit var userSurname: String
     private lateinit var userPassword: String
+    private lateinit var accountType: String
 
     private var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
@@ -55,10 +56,26 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun populateViews() {
-        userName = intent.getStringExtra("user_name").toString()
-        userSurname = intent.getStringExtra("user_surname").toString()
-        nameTagTextView.text = userName + " " + userSurname
-        userPassword = intent.getStringExtra("user_password").toString()
+        if (intent.hasExtra("user_name")) {
+            userName = intent.getStringExtra("user_name").toString()
+            userSurname = intent.getStringExtra("user_surname").toString()
+            nameTagTextView.text = userName + " " + userSurname
+            userPassword = intent.getStringExtra("user_password").toString()
+        } else {
+            accountType = intent.getStringExtra("type").toString()
+            if (accountType == "caregiver") {
+                userName = "Care"
+                userSurname = "Giver"
+                nameTagTextView.text = userName + " " + userSurname
+                userPassword = "caregiver"
+            } else {
+                userName = "Patient"
+                userSurname = "1"
+                nameTagTextView.text = userName + " " + userSurname
+                userPassword = "patient"
+            }
+        }
+
         //accountPhotoImageView.background = getDrawable(resources.obtainTypedArray(R.array.drawable_array).getResourceId(resources.getStringArray(R.array.title_array).indexOf(intent.getStringExtra("title").toString()),0 ))
     }
 
@@ -74,7 +91,7 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when (p0) {
             backButtonImageView -> onBackPressed()
-            logOutButton -> TODO("Start main activity")
+            logOutButton -> onLogOutPressed()
             accountPhotoImageView -> buildAlertDialog()
             containerDetailsImageView -> openDetails()
             containerPasswordImageView -> openPassword()
@@ -123,5 +140,10 @@ class AccountActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun openProblem() {
         startActivity(Intent(this, AccountProblemActivity::class.java))
+    }
+
+    private fun onLogOutPressed() {
+        val intent = Intent ( this, LoginActivity::class.java )
+        resultLauncher.launch(intent)
     }
 }
