@@ -95,7 +95,7 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
             year = c.get(Calendar.YEAR);
             month = c.get(Calendar.MONTH);
             day = c.get(Calendar.DAY_OF_MONTH);
-            val datePickerDialog = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            val datePickerDialog = DatePickerDialog(this, R.style.DialogTheme, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
                 //txtDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year)
                 m_year = year
                 m_month = monthOfYear
@@ -109,7 +109,7 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
             val c = Calendar.getInstance();
             hour = c.get(Calendar.HOUR_OF_DAY);
             minute = c.get(Calendar.MINUTE);
-            val timePickerDialog = TimePickerDialog(this, TimePickerDialog.OnTimeSetListener() { view, hourOfDay, minute ->
+            val timePickerDialog = TimePickerDialog(this, R.style.DialogTheme, TimePickerDialog.OnTimeSetListener() { view, hourOfDay, minute ->
                 //txtTime.setText(hourOfDay + ":" + minute)
                 m_hour = hourOfDay
                 m_minute = minute
