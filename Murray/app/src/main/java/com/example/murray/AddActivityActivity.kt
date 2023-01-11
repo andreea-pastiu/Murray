@@ -5,16 +5,20 @@ import android.app.*
 import android.app.Activity.RESULT_OK
 import android.app.appsearch.AppSearchResult.RESULT_OK
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.SyncAdapterType
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.getSystemService
 import com.example.murray.databinding.ActivityMainPageBinding
 import com.example.murray.model.Activity
 import java.time.DayOfWeek
+import java.time.DayOfWeek.of
 import java.util.*
+import java.util.Calendar.DAY_OF_WEEK
 
 class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
 
@@ -108,14 +112,17 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
         }
 
         if (v == buttonSaveActivity ) {
-            var select_date = 0
-            if (cbSunday.isChecked) recurrence.add(1)
-            if (cbMonday.isChecked) recurrence.add(2)
-            if (cbTuesday.isChecked) recurrence.add(3)
-            if (cbWednesday.isChecked) recurrence.add(4)
-            if (cbThursday.isChecked) recurrence.add(5)
-            if (cbFriday.isChecked) recurrence.add(6)
-            if (cbSaturday.isChecked) recurrence.add(7)
+            var date_alert = 0
+            var time_alert = 0
+            var name_alert = 0
+            var details_alert = 0
+            if (cbSunday.isChecked) recurrence.add(7)
+            if (cbMonday.isChecked) recurrence.add(1)
+            if (cbTuesday.isChecked) recurrence.add(2)
+            if (cbWednesday.isChecked) recurrence.add(3)
+            if (cbThursday.isChecked) recurrence.add(4)
+            if (cbFriday.isChecked) recurrence.add(5)
+            if (cbSaturday.isChecked) recurrence.add(6)
 
 
             name = editTextActivityName.text.toString()
@@ -124,22 +131,35 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
             activitiesList = intent.extras?.get("activities") as ArrayList<Activity>
 
 
-            if (this::date.isInitialized && recurrence.isEmpty()) {
-                activitiesList.add(Activity(name, details, time, status, date, recurrence))
-                scheduleNotification()
-            } else {
-                if (recurrence.isEmpty()) {
-                    select_date = 1;
+            if (recurrence.isEmpty()) {
+                if (this::date.isInitialized) {
+                    activitiesList.add(Activity(name, details, time, status, date, recurrence))
+                    scheduleNotification()
                 } else {
+                    date_alert = 1;
+                }
+            } else {
                     activitiesList.add(Activity(name, details, time, status, "no date", recurrence))
                     scheduleNotificationRepeating(recurrence)
                 }
+            if (name.isEmpty()) {
+                name_alert = 1
+            }
+            
+            if (details.isEmpty()) {
+                details_alert = 1
+            }
+            
+            if (!this::time.isInitialized) {
+                time_alert = 1
+            }
+            
+            if (name_alert == 1 || details_alert == 1 || time_alert == 1 || date_alert == 1) {
+                alert(name_alert, details_alert, time_alert, date_alert)
+            } else {
+                alert_add_activity()
             }
 
-            val resultIntent = Intent()
-            resultIntent.putExtra("activities", activitiesList)
-            setResult(1, resultIntent)
-            finish()
         }
 
     }
@@ -171,6 +191,7 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
 
     private fun scheduleNotificationRepeating(recurrence: MutableList<Int> )
     {
+        println(recurrence[0])
         val intent = Intent(this, NotificationForActivity::class.java)
         val activityN = editTextActivityName.text.toString()
         val activityD = editTextDescriptionActivity.text.toString()
@@ -188,6 +209,7 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
         for (i in recurrence) {
+            println(i)
             val time = getTimeRepeating(i)
             alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, time,AlarmManager.INTERVAL_DAY * 7, pendingIntent);
         }
@@ -215,4 +237,59 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
         return calendar.timeInMillis
     }
 
+    private fun alert(name_alert: Int, details_alert: Int, time_alert: Int, date_alert: Int) {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this@AddActivityActivity)
+
+        builder.setCancelable(true)
+        builder.setTitle("Upsi...")
+        var messageString = "You left the following fields empty: \n"
+        
+        if (name_alert == 1) {
+            messageString += "Activity name \n"
+        }
+        if (details_alert == 1) {
+            messageString += "Activity details \n"
+        }
+        if (time_alert == 1) {
+            messageString += "Activity time \n"
+        }
+        if (date_alert == 1) {
+            messageString += "Activity date \n"
+        }
+        builder.setMessage(messageString)
+
+        builder.setNegativeButton("Ok",
+            DialogInterface.OnClickListener { dialogInterface, i -> dialogInterface.cancel() })
+        builder.show()
+    }
+    private fun alert_add_activity() {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this@AddActivityActivity)
+
+        builder.setCancelable(true)
+        builder.setTitle("New Activity")
+        var messageString = "You will create an activity with the name " + name + " that has the description " +
+                                details + " and happens at " + time;
+        if (recurrence.isNotEmpty()) {
+            messageString += " every "
+            for (i in recurrence) {
+                val day = of(i)
+                messageString += day.toString() + " "
+            }
+        } else {
+            messageString += " on " + date
+        }
+        builder.setMessage(messageString)
+
+        builder.setPositiveButton("OK") { dialogInterface: DialogInterface, i: Int ->
+            val resultIntent = Intent()
+            resultIntent.putExtra("activities", activitiesList)
+            setResult(1, resultIntent)
+            finish()
+        }
+            // A "Cancel" button that does nothing
+            .setNegativeButton("Cancel") { dialogInterface, id ->
+                dialogInterface.cancel()
+            }
+        builder.show()
+    }
 }

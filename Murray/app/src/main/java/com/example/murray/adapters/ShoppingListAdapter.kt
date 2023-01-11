@@ -1,6 +1,8 @@
 package com.example.murray.adapters
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,9 +34,25 @@ class ShoppingListAdapter(private val context: Context, private val dataSource: 
         rowView.findViewById<TextView>(R.id.textViewShoppingItem).text = dataSource[p0].name
         val button = rowView.findViewById<ImageView>(R.id.imageViewDelete)
         button.setOnClickListener {
+            alertDelete(p0)
+        }
+        return rowView;
+    }
+    private fun alertDelete(p0: Int) {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(context)
+
+        builder.setCancelable(true)
+        builder.setTitle("Delete")
+        var messageString = "Do you want to delete the item " + dataSource[p0].name + "?"
+        builder.setMessage(messageString)
+
+        builder.setPositiveButton("OK") { dialogInterface: DialogInterface, i: Int ->
             dataSource.removeAt(p0)
             notifyDataSetChanged()
         }
-        return rowView;
+            .setNegativeButton("Cancel") { dialogInterface, id ->
+                dialogInterface.cancel()
+            }
+        builder.show()
     }
 }

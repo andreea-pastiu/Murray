@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import java.time.DayOfWeek
 
 class ViewActivityActivity: AppCompatActivity(), View.OnClickListener {
 
@@ -12,6 +13,8 @@ class ViewActivityActivity: AppCompatActivity(), View.OnClickListener {
     private lateinit var activityName: String
     private lateinit var activityDetails: String
     private lateinit var activityTime: String
+    private lateinit var activityDate: String
+    private lateinit var activityRecurrence: ArrayList<Int>
     private lateinit var textViewActivityName: TextView
     private lateinit var textViewActivityDetails: TextView
     private lateinit var textViewActivityTime: TextView
@@ -43,9 +46,21 @@ class ViewActivityActivity: AppCompatActivity(), View.OnClickListener {
         activityName = intent.getStringExtra("activity_name").toString()
         activityDetails = intent.getStringExtra("activity_description").toString()
         activityTime = intent.getStringExtra("activity_time").toString()
+        activityDate = intent.getStringExtra("activity_date").toString()
+        activityRecurrence = intent.extras?.get("activity_r") as ArrayList<Int>
 
         textViewActivityName.text = activityName
         textViewActivityDetails.text = activityDetails
-        textViewActivityTime.text = "Do activity at " + activityTime
+        var messageString = "Do activity at " + activityTime
+        if (activityRecurrence.isNotEmpty()) {
+            messageString += " every "
+            for (i in activityRecurrence) {
+                val day = DayOfWeek.of(i)
+                messageString += day.toString() + " "
+            }
+        } else {
+            messageString += " on " + activityDate
+        }
+        textViewActivityTime.text = messageString
     }
 }

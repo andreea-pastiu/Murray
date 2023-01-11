@@ -89,8 +89,15 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
                 }
             }
             activitiesButton -> {
-                val intent = Intent(this,ViewListActivitiesActivity::class.java)
-                startActivity(intent)
+                if (accountType == "caregiver") {
+                    val intent = Intent(this,ViewListActivitiesCaregiverActivity::class.java)
+                    startActivity(intent)
+                }
+                else {
+                    val intent = Intent(this,ViewListActivitiesPatientActivity::class.java)
+                    startActivity(intent)
+                }
+
             }
            shoppingButton -> {
                 val intent = Intent(this,ViewShoppingListActivity::class.java)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    
+
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <application
         android:allowBackup="true"
@@ -101,7 +101,8 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Design.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -249,7 +250,15 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ViewListActivitiesActivity"
+            android:name=".ViewListActivitiesCaregiverActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.Light" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewListActivitiesPatientActivity"
             android:exported="false"
             android:theme="@style/Theme.Design.Light" >
             <meta-data

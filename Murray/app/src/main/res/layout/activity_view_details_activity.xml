@@ -63,6 +63,7 @@
             android:textColor="@color/black"
             app:layout_constraintTop_toTopOf="parent"
             android:fontFamily="@font/nunitobold"/>
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="530dp"

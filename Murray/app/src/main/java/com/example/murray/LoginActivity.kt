@@ -8,7 +8,11 @@ import android.view.View.*
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.example.murray.model.Activity
+import com.example.murray.model.ShoppingListItem
 
+var activitiesList = mutableListOf<Activity>() as ArrayList<Activity>
+var shoppingList = mutableListOf<ShoppingListItem>() as ArrayList<ShoppingListItem>
 class LoginActivity : AppCompatActivity(), OnClickListener {
     private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
@@ -59,16 +63,16 @@ class LoginActivity : AppCompatActivity(), OnClickListener {
                         //intent.putExtra("type", "caregiver")
                         //startActivity(intent)
                         //val intent = Intent(this, ContactListPatientActivity::class.java)
-
                         val intent = Intent(this, MainPageActivity::class.java)
                         intent.putExtra("type", "caregiver")
                         startActivity(intent)
+
                     } else {
                         if (emailEditText.text.toString() == "patient@gmail.com" && passwordEditText.text.toString() == "patient") {
                             errorLoginTextView.visibility = GONE
                             //go to Home Page
-                            val intent = Intent(this, QuizUserActivity::class.java)
-                            //intent.putExtra("type", "patient")
+                            val intent = Intent(this, MainPageActivity::class.java)
+                            intent.putExtra("type", "patient")
                             startActivity(intent)
                         } else {
                             errorLoginTextView.visibility = VISIBLE

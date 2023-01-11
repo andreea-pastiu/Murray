@@ -1,6 +1,8 @@
 package com.example.murray
 
+import android.app.AlertDialog
 import android.app.Dialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
 import android.view.Window
@@ -19,7 +21,7 @@ class ViewShoppingListActivity: AppCompatActivity(), View.OnClickListener {
     private lateinit var addShoppingListItemButton: ImageView
     private lateinit var listView: ListView
     private lateinit var shoppingAdapter: ShoppingListAdapter
-    private var shoppingList = mutableListOf<ShoppingListItem>() as ArrayList<ShoppingListItem>
+
     private lateinit var cancelButton: Button
     private lateinit var saveButton: Button
     private lateinit var newItem: EditText
@@ -62,8 +64,12 @@ class ViewShoppingListActivity: AppCompatActivity(), View.OnClickListener {
         newItem = dialog.findViewById(R.id.editTextEnterItem)
 
         saveButton.setOnClickListener {
-            shoppingList.add(ShoppingListItem(newItem.text.toString()))
-            dialog.dismiss()
+            if (newItem.text.isEmpty()) {
+                alert()
+            } else {
+                shoppingList.add(ShoppingListItem(newItem.text.toString()))
+                dialog.dismiss()
+            }
         }
         cancelButton.setOnClickListener {
             dialog.dismiss()
@@ -71,10 +77,22 @@ class ViewShoppingListActivity: AppCompatActivity(), View.OnClickListener {
         dialog.show()
     }
 
+    private fun alert() {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this@ViewShoppingListActivity)
+
+        builder.setCancelable(true)
+        builder.setTitle("Upsi...")
+        builder.setMessage("You left the item field empty")
+
+        builder.setNegativeButton("Ok",
+            DialogInterface.OnClickListener { dialogInterface, i -> dialogInterface.cancel() })
+        builder.show()
+    }
+
     override fun onClick(v: View?) {
         when (v) {
             backButtonImageView -> {
-
+                onBackPressed()
             }
             addShoppingListItemButton -> {
                 showDialog()
