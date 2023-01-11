@@ -66,18 +66,22 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
             }
             locationsButton -> {
                 if (accountType == "caregiver") {
-
+                    val intent = Intent(this, LocationAdminActivity::class.java)
+                    startActivity(intent)
                 }
                 else {
-
+                    val intent = Intent(this, LocationPatientActivity::class.java)
+                    startActivity(intent)
                 }
             }
             quizButton -> {
                 if (accountType == "caregiver") {
-
+                    val intent = Intent(this, QuizAdminActivity::class.java)
+                    startActivity(intent)
                 }
                 else {
-
+                    val intent = Intent(this, QuizUserActivity::class.java)
+                    startActivity(intent)
                 }
             }
             medicationButton -> {
@@ -105,7 +109,7 @@ class MainPageActivity: AppCompatActivity(), View.OnClickListener {
                 }
             }
             accountButton -> {
-                val intent = Intent(this,AccountActivity::class.java)
+                val intent = Intent(this, AccountActivity::class.java)
                 startActivity(intent)
             }
             else -> {}

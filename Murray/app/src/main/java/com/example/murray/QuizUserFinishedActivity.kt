@@ -43,8 +43,8 @@ class QuizUserFinishedActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        //TODO("Return to main page")
-        val intent = Intent ( this, LoginActivity::class.java )
+        val intent = Intent ( this, MainPageActivity::class.java )
+        intent.putExtra("type", "patient")
         startActivity(intent)
     }
 

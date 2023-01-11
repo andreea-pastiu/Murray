@@ -13,6 +13,7 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="Widget.Button.Toggle" parent="android:Widget">
         <item name="android:background">@drawable/toggle_bg</item>
     </style>

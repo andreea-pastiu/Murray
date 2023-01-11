@@ -57,7 +57,7 @@
         android:textColor="@color/black"
         android:fontFamily="@font/nunitobold"
         android:layout_marginStart="@dimen/def_margin_start"
-        android:layout_marginTop="@dimen/def_medium_margin_top"
+        android:layout_marginTop="@dimen/def_small_margin_top"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle2"
         app:layout_constraintStart_toStartOf="parent"/>
 
