@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
@@ -58,6 +59,13 @@ class ViewShoppingListActivity: AppCompatActivity(), View.OnClickListener {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.dialog_custom_add_shopping_item)
+        val window = dialog.window
+
+        val width = (resources.displayMetrics.widthPixels * 0.8f).toInt()
+        val height = (resources.displayMetrics.heightPixels * 0.7f).toInt()
+
+        window?.setLayout(width, height)
+        window?.setGravity(Gravity.CENTER)
 
         saveButton = dialog.findViewById(R.id.buttonAddToShoppingList)
         cancelButton = dialog.findViewById(R.id.buttonCancelShoppingList)

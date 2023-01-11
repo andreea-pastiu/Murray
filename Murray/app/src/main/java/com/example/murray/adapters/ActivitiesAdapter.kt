@@ -1,6 +1,7 @@
 package com.example.murray.adapters
 
 import android.app.AlertDialog
+import android.app.NotificationManager
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.getSystemService
 import com.example.murray.R
 import com.example.murray.model.Activity
 import java.time.DayOfWeek
@@ -37,7 +39,6 @@ class ActivitiesAdapter(private val context: Context, private val dataSource: Ar
         val button = rowView.findViewById<ImageView>(R.id.imageViewDelete)
         button.setOnClickListener {
             alertDelete(p0)
-
         }
         return rowView;
     }
@@ -50,6 +51,9 @@ class ActivitiesAdapter(private val context: Context, private val dataSource: Ar
         builder.setMessage(messageString)
 
         builder.setPositiveButton("OK") { dialogInterface: DialogInterface, i: Int ->
+
+            val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.cancel(dataSource[p0].notificationID)
             dataSource.removeAt(p0)
             notifyDataSetChanged()
         }

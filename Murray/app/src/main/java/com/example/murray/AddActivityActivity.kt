@@ -28,6 +28,7 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
     private lateinit var buttonSelectDate: ImageView
     private lateinit var buttonSelectTime: ImageView
     private lateinit var buttonSaveActivity: Button
+    private lateinit var backButtonImageView: ImageView
     private var year = 0
     private var month = 0
     private var day = 0
@@ -74,15 +75,20 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
         cbFriday = findViewById(R.id.checkbox_friday)
         cbSaturday = findViewById(R.id.checkbox_saturday)
         buttonSaveActivity = findViewById(R.id.buttonSaveActivity)
+        backButtonImageView = findViewById(R.id.imageViewBackButton)
     }
 
     private fun setListeners() {
         buttonSelectDate.setOnClickListener(this)
         buttonSelectTime.setOnClickListener(this)
         buttonSaveActivity.setOnClickListener(this)
+        backButtonImageView.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
+        if (v == backButtonImageView ) {
+            onBackPressed()
+        }
 
         if (v == buttonSelectDate) {
             val c = Calendar.getInstance();
@@ -130,28 +136,20 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
             status = "TO DO"
             activitiesList = intent.extras?.get("activities") as ArrayList<Activity>
 
-
-            if (recurrence.isEmpty()) {
-                if (this::date.isInitialized) {
-                    activitiesList.add(Activity(name, details, time, status, date, recurrence))
-                    scheduleNotification()
-                } else {
-                    date_alert = 1;
-                }
-            } else {
-                    activitiesList.add(Activity(name, details, time, status, "no date", recurrence))
-                    scheduleNotificationRepeating(recurrence)
-                }
             if (name.isEmpty()) {
                 name_alert = 1
             }
-            
+
             if (details.isEmpty()) {
                 details_alert = 1
             }
-            
+
             if (!this::time.isInitialized) {
                 time_alert = 1
+            }
+
+            if (recurrence.isEmpty() && !this::date.isInitialized) {
+                    date_alert = 1;
             }
             
             if (name_alert == 1 || details_alert == 1 || time_alert == 1 || date_alert == 1) {
@@ -172,14 +170,14 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
         intent.putExtra( "activity_name", activityN)
         intent.putExtra( "activity_description", activityD)
 
-        notificationID_Activity += 1
+
         val pendingIntent = PendingIntent.getBroadcast(
             this,
             notificationID_Activity,
             intent,
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
-
+        notificationID_Activity += 1
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val time = getTime()
         alarmManager.setExactAndAllowWhileIdle(
@@ -281,6 +279,13 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
         builder.setMessage(messageString)
 
         builder.setPositiveButton("OK") { dialogInterface: DialogInterface, i: Int ->
+            if (recurrence.isEmpty()) {
+                    activitiesList.add(Activity(name, details, time, status, date, recurrence, notificationID_Activity))
+                    scheduleNotification()
+            } else {
+                activitiesList.add(Activity(name, details, time, status, "no date", recurrence, notificationID_Activity))
+                scheduleNotificationRepeating(recurrence)
+            }
             val resultIntent = Intent()
             resultIntent.putExtra("activities", activitiesList)
             setResult(1, resultIntent)

@@ -38,8 +38,12 @@ class ViewActivityActivity: AppCompatActivity(), View.OnClickListener {
         backButtonImageView.setOnClickListener(this)
     }
 
-    override fun onClick(p0: View?) {
-        TODO("Not yet implemented")
+    override fun onClick(v: View?) {
+        when (v) {
+            backButtonImageView -> {
+                onBackPressed()
+            }
+        }
     }
 
     private fun setData() {

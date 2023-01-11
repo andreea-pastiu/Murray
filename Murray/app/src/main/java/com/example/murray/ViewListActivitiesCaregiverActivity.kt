@@ -45,7 +45,7 @@ class ViewListActivitiesCaregiverActivity: AppCompatActivity(), View.OnClickList
     override fun onClick(v: View?) {
         when (v) {
             backButtonImageView -> {
-
+                onBackPressed()
             }
             addActivityButton -> {
                 val intent = Intent(this, AddActivityActivity::class.java)

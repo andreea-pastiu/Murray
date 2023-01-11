@@ -39,7 +39,7 @@ class ViewListActivitiesPatientActivity: AppCompatActivity(), View.OnClickListen
     override fun onClick(v: View?) {
         when (v) {
             backButtonImageView -> {
-
+                onBackPressed()
             }
         }
     }
