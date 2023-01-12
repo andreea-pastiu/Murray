@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.SyncAdapterType
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -103,7 +104,10 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
 
                 date = dayOfMonth.toString() + "-" + (monthOfYear + 1).toString() + "-" + year.toString()
             }, year, month, day)
+
             datePickerDialog.show();
+            datePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE).setTextColor(Color.GRAY);
+            datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE).setTextColor(Color.GRAY);
         }
         if (v == buttonSelectTime) {
             val c = Calendar.getInstance();
@@ -113,8 +117,11 @@ class AddActivityActivity: AppCompatActivity(), View.OnClickListener {
                 //txtTime.setText(hourOfDay + ":" + minute)
                 m_hour = hourOfDay
                 m_minute = minute
-                time = hourOfDay.toString() + ":" + minute.toString()                                                                              }, hour, minute, false);
+                time = hourOfDay.toString() + ":" + minute.toString()   }, hour, minute, false);
+
             timePickerDialog.show();
+            timePickerDialog.getButton(TimePickerDialog.BUTTON_POSITIVE).setTextColor(Color.GRAY);
+            timePickerDialog.getButton(TimePickerDialog.BUTTON_NEGATIVE).setTextColor(Color.GRAY);
         }
 
         if (v == buttonSaveActivity ) {

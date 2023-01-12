@@ -10,9 +10,10 @@
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         app:cardElevation="8dp"
+        app:cardBackgroundColor="#F3F4FF"
         app:cardCornerRadius="8dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
